@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="32dp">
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <Button
         android:id="@+id/intentBtn"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -15,7 +15,8 @@
         android:text="Intent Button"
         android:layout_marginBottom="32dp" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <Button
+        android:id="@+id/fragmentBtn"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:gravity="center"

@@ -3,9 +3,8 @@ package me.dz.mobilemerge.chapter2.activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatTextView
 import me.dz.mobilemerge.R
 import me.dz.mobilemerge.chapter2.fragment.Chapter2Fragment
 
@@ -23,8 +22,8 @@ class Chapter2Activity: AppCompatActivity() {
     }
 
     private fun initView() {
-        val intentBtn = findViewById<AppCompatTextView>(R.id.intentBtn)
-        val fragmentBtn = findViewById<AppCompatTextView>(R.id.intentBtn)
+        val intentBtn = findViewById<Button>(R.id.intentBtn)
+        val fragmentBtn = findViewById<Button>(R.id.fragmentBtn)
 
         intentBtn.setOnClickListener {
             testIntent()
@@ -46,6 +45,7 @@ class Chapter2Activity: AppCompatActivity() {
         val fragment = Chapter2Fragment.newInstance("Test Fragment")
         supportFragmentManager.beginTransaction()
             .add(R.id.container, fragment)
+            .commit()
     }
 
     override fun onStart() {
